@@ -51,6 +51,6 @@ jobs:
 
       - name: Deploy with Helm
         run: |
-          helm upgrade --install node-app ./node-app \
+          helm upgrade --install node-app ./node-app-chart \
             --set image.repository=${{ env.IMAGE_NAME }} \
             --set image.tag=${{ env.IMAGE_TAG }}
